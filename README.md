@@ -1,2 +1,252 @@
 # invitacion
 invitacion
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Una Invitación Especial para Fabi ❤️</title>
+
+<style>
+
+    /* Diseño general */
+    body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #080008, #380014, #080008);
+        color: white;
+        text-align: center;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    /* Tarjeta de invitación */
+    .invitacion {
+        background: rgba(20, 0, 10, 0.95);
+        border: 2px solid crimson;
+        border-radius: 20px;
+        padding: 35px 25px;
+        max-width: 450px;
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: 0 0 35px crimson;
+        animation: aparecer 2s ease;
+    }
+
+    /* Título */
+    h1 {
+        color: #ff1744;
+        text-shadow: 0 0 20px red;
+        font-size: 30px;
+    }
+
+    h2 {
+        color: #ffb3c1;
+        font-size: 22px;
+    }
+
+    /* Símbolo de Wanda */
+    .wanda {
+        font-size: 85px;
+        margin: 20px;
+        animation: magia 2s infinite alternate;
+    }
+
+    /* Texto */
+    p {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    /* Película */
+    .pelicula {
+        color: #ff1744;
+        font-size: 25px;
+        font-weight: bold;
+        text-shadow: 0 0 15px crimson;
+    }
+
+    /* Botones */
+    button {
+        background: linear-gradient(45deg, #9b0028, #ff1744);
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        margin: 10px;
+        border-radius: 12px;
+        font-size: 17px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 25px red;
+    }
+
+    /* Mensaje oculto */
+    #mensaje {
+        display: none;
+        margin-top: 25px;
+        padding: 20px;
+        border: 1px solid crimson;
+        border-radius: 15px;
+        background: rgba(130, 0, 30, 0.3);
+        color: #ffd6df;
+        animation: aparecer 1s ease;
+    }
+
+    /* Animación de magia */
+    @keyframes magia {
+        from {
+            transform: scale(1);
+            filter: drop-shadow(0 0 10px red);
+        }
+
+        to {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 35px crimson);
+        }
+    }
+
+    /* Animación de aparición */
+    @keyframes aparecer {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+</style>
+</head>
+
+<body>
+
+    <div class="invitacion">
+
+        <!-- Símbolo de magia -->
+        <div class="wanda">🔮❤️</div>
+
+        <h1>Una Invitación Especial</h1>
+
+        <h2>En todos los universos...</h2>
+
+        <p>
+            Wanda puede alterar la realidad,
+            cambiar el destino y controlar
+            la magia del caos...
+        </p>
+
+        <p>
+            Pero si yo pudiera elegir
+            entre todos los universos,
+            siempre elegiría uno
+            donde pudiera compartir
+            este momento contigo. ❤️
+        </p>
+
+        <hr style="border: 1px solid crimson;">
+
+        <p>🎬 Te invito a ver:</p>
+
+        <div class="pelicula">
+            AVENGERS:<br>
+            DOOMSDAY
+        </div>
+
+        <p>
+            ❤️ Una película épica.<br>
+            🍿 Unas palomitas.<br>
+            🥤 Algo para tomar.<br>
+            ✨ Y la mejor compañía: tú.
+        </p>
+
+        <h2>¿Aceptas esta misión conmigo? ❤️</h2>
+
+        <!-- Botones -->
+        <button id="btnAceptar">
+            ❤️ Acepto la misión
+        </button>
+
+        <button id="btnPensar">
+            🔮 Déjame pensarlo
+        </button>
+
+        <!-- Mensaje al aceptar -->
+        <div id="mensaje"></div>
+
+    </div>
+
+    <script>
+
+        // Seleccionar elementos
+        const btnAceptar = document.getElementById("btnAceptar");
+        const btnPensar = document.getElementById("btnPensar");
+        const mensaje = document.getElementById("mensaje");
+
+        // Cuando acepta la invitación
+        btnAceptar.addEventListener("click", () => {
+
+            mensaje.style.display = "block";
+
+            mensaje.innerHTML = `
+                <h2>❤️ ¡Misión aceptada! ❤️</h2>
+
+                <p>
+                    Ni siquiera la magia del caos
+                    podría crear un momento
+                    más bonito que compartir
+                    esta película contigo.
+                </p>
+
+                <p>
+                    🎬 Nuestro próximo destino:<br>
+                    <strong>AVENGERS: DOOMSDAY</strong>
+                </p>
+
+                <p>
+                    ✨ En cualquier universo,
+                    te elegiría a ti. ❤️
+                </p>
+            `;
+
+            btnAceptar.textContent = "❤️ Misión confirmada";
+
+        });
+
+        // Cuando quiere pensarlo
+        btnPensar.addEventListener("click", () => {
+
+            mensaje.style.display = "block";
+
+            mensaje.innerHTML = `
+                <h2>🔮 Wanda tiene una visión...</h2>
+
+                <p>
+                    En millones de realidades posibles,
+                    hay una donde aceptas
+                    ir al cine conmigo. ❤️
+                </p>
+
+                <p>
+                    ¿Y si hacemos que esa
+                    realidad sea la nuestra? ✨
+                </p>
+            `;
+
+        });
+
+    </script>
+
+</body>
+</html>
